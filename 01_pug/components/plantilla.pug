@@ -1,0 +1,24 @@
+//- //- HTML Básico
+//- <h1> Título </h1>
+//- <p> Lorem Ipsum </p>
+
+//- //- pug
+
+//- h1 Título
+//- p Lorem ipsum 
+//- div
+//-   span button
+
+include ./config.pug
+
+doctype html
+html(lang="en")
+  
+  include ./head.pug
+
+  body
+    include ./header.pug
+    block contenidos
+    include ./footer.pug
+
+
