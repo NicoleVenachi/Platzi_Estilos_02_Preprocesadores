@@ -43,11 +43,28 @@ $color-claro: #FFF;
   }
 }
 
+
+// mixin/funcs font responsive
+
+@function calculateRem($size){
+	$remSize: $size / 16px;
+	@return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+	font-size: $size;
+	font-size: calculateRem($size);
+	line-height: calculateRem($size)*1.5;	
+}
+
+
 body {
 	margin: 0;
 	background-color: #F9FAFC;
 	color: $color-primario;
 	@include titulos($Fuente1);
+
+	@include font-size(18px);
 }
 
 main {
